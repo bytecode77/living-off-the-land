@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Injector", "Injector\Injector.csproj", "{B9D78E5A-5A7A-42B3-941B-C0B60AEDE055}"
+	ProjectSection(ProjectDependencies) = postProject
+		{82D929D6-042D-41B3-B5D7-7BD9386E99A0} = {82D929D6-042D-41B3-B5D7-7BD9386E99A0}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Payload", "Payload\Payload.vcxproj", "{82D929D6-042D-41B3-B5D7-7BD9386E99A0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{75713B60-EC1D-4422-B47A-415954D607F7} = {75713B60-EC1D-4422-B47A-415954D607F7}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Global", "Global", "{43D68A28-BBFF-4A73-BA1A-0A54CAF46AEF}"
+	ProjectSection(SolutionItems) = preProject
+		Global\NativeRegistry.h = Global\NativeRegistry.h
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncryptFile", "EncryptFile\EncryptFile.csproj", "{75713B60-EC1D-4422-B47A-415954D607F7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LivingOffTheLand", "LivingOffTheLand\LivingOffTheLand.vcxproj", "{93ED04A8-5739-4BE3-A6DB-B568CAD77587}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B9D78E5A-5A7A-42B3-941B-C0B60AEDE055} = {B9D78E5A-5A7A-42B3-941B-C0B60AEDE055}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RemovalTool", "RemovalTool\RemovalTool.vcxproj", "{9151A350-4D9B-4F5B-A26F-C2546C382E8C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9D78E5A-5A7A-42B3-941B-C0B60AEDE055}.Debug|x86.ActiveCfg = Debug|x86
+		{B9D78E5A-5A7A-42B3-941B-C0B60AEDE055}.Debug|x86.Build.0 = Debug|x86
+		{B9D78E5A-5A7A-42B3-941B-C0B60AEDE055}.Release|x86.ActiveCfg = Release|x86
+		{B9D78E5A-5A7A-42B3-941B-C0B60AEDE055}.Release|x86.Build.0 = Release|x86
+		{82D929D6-042D-41B3-B5D7-7BD9386E99A0}.Debug|x86.ActiveCfg = Debug|Win32
+		{82D929D6-042D-41B3-B5D7-7BD9386E99A0}.Debug|x86.Build.0 = Debug|Win32
+		{82D929D6-042D-41B3-B5D7-7BD9386E99A0}.Release|x86.ActiveCfg = Release|Win32
+		{82D929D6-042D-41B3-B5D7-7BD9386E99A0}.Release|x86.Build.0 = Release|Win32
+		{75713B60-EC1D-4422-B47A-415954D607F7}.Debug|x86.ActiveCfg = Debug|x86
+		{75713B60-EC1D-4422-B47A-415954D607F7}.Debug|x86.Build.0 = Debug|x86
+		{75713B60-EC1D-4422-B47A-415954D607F7}.Release|x86.ActiveCfg = Release|x86
+		{75713B60-EC1D-4422-B47A-415954D607F7}.Release|x86.Build.0 = Release|x86
+		{93ED04A8-5739-4BE3-A6DB-B568CAD77587}.Debug|x86.ActiveCfg = Debug|Win32
+		{93ED04A8-5739-4BE3-A6DB-B568CAD77587}.Debug|x86.Build.0 = Debug|Win32
+		{93ED04A8-5739-4BE3-A6DB-B568CAD77587}.Release|x86.ActiveCfg = Release|Win32
+		{93ED04A8-5739-4BE3-A6DB-B568CAD77587}.Release|x86.Build.0 = Release|Win32
+		{9151A350-4D9B-4F5B-A26F-C2546C382E8C}.Debug|x86.ActiveCfg = Debug|Win32
+		{9151A350-4D9B-4F5B-A26F-C2546C382E8C}.Debug|x86.Build.0 = Debug|Win32
+		{9151A350-4D9B-4F5B-A26F-C2546C382E8C}.Release|x86.ActiveCfg = Release|Win32
+		{9151A350-4D9B-4F5B-A26F-C2546C382E8C}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CD7CFB61-9289-4620-9F8A-EE8193FB7006}
+	EndGlobalSection
+EndGlobal

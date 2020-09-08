@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="LivingOffTheLand.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Global\NativeRegistry.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{f9c5a10a-e746-46ee-9eba-862e4b551744}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Injector.exe">
+      <Filter>Resources</Filter>
+    </None>
+  </ItemGroup>
+</Project>
