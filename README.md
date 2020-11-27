@@ -60,6 +60,7 @@ As a result, a new process (C:\Windows\System32\svchost.exe) is visible in TaskM
 ## Downloads
 
 [![](http://bytecode77.com/public/fileicons/zip.png) LivingOffTheLand 1.0.0.zip](https://bytecode77.com/downloads/LivingOffTheLand%201.0.0.zip)
+(**ZIP Password:** bytecode77)
 
 ## Project Page
 
