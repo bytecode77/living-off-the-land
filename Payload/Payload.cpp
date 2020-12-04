@@ -16,7 +16,7 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 		"\n"
 		"\n"
 		"Read more:\n"
-		"https://bytecode77.com/hacking/poc/living-off-the-land\n"
+		"https://bytecode77.com/living-off-the-land\n"
 		"https://github.com/bytecode77/living-off-the-land",
 		"Living Off The Land",
 		MB_OK | MB_ICONASTERISK
