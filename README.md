@@ -4,7 +4,7 @@
 
 Since antivirus software became increasingly better at detecting malicious files, the obvious solution is to not use any files at all.
 
-![](https://bytecode77.com/images/pages/living-off-the-land/payload.png)
+![](https://bytecode77.com/images/pages/living-off-the-land/payload.webp)
 
 It is possible to achieve persistence by solely relying on existing operating system files to do the job. On Windows, there are lots of LOLBins (living off the land binaries), like Powershell. The registry can be used for storage. Technically, the registry is stored on the disk, therefore this is a Type II fileless attack.
 
@@ -55,7 +55,7 @@ mshta.exe is not essential. But without it, a powershell window is briefly visib
 
 Because mshta is wrapping powershell, which is wrapping C#, multiple layers of string escaping are required :(
 
-![](https://bytecode77.com/images/pages/living-off-the-land/registry.png)
+![](https://bytecode77.com/images/pages/living-off-the-land/registry.webp)
 
 To masquerade the registry value, a **null embedded character** is used. The name of the registry value starts with a NULL character, followed by the actual name. Since WinAPI uses null terminated strings, the name of the value technically equals to NULL. However, the script is still executed on startup because the content of the value is valid. The registry editor is unable to display this value, and so is any program that uses the WinAPI to read the registry. It is required to use the native API, which uses UNICODE_STRING allowing to read and write embedded NULL characters.
 
@@ -73,7 +73,7 @@ The injector then proceeds to load the actual Payload.exe from its own executabl
 
 As a result, a new process (C:\Windows\System32\svchost.exe) is visible in TaskMgr, but it's actually Payload.exe. This process cannot be distinguished from legitimate instances of the same file without significant effort. Most 32-bit Windows binaries can be used for process hollowing of 32-bit executables.
 
-![](https://bytecode77.com/images/pages/living-off-the-land/process.png)
+![](https://bytecode77.com/images/pages/living-off-the-land/process.webp)
 
 *... and not a single file has been written to the disk today.*
 
